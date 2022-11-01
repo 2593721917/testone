@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .box{
+            width: 1140px;
+            height: 70px;
+            
+            margin: 0 auto;
+            display: flex;
+            background-color:rgb(248,249,250) ;
+            
+        }
+        .box2{
+            width: 200px;
+        }
+        img{
+            width: 200px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        .nav{
+            width: 740px;
+            height: 70px;
+            display: flex;
+            line-height: 70px;
+            
+        }
+        .nav a{
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            color: rgba(0,0,0,.5);
+            text-align: center;
+        }
+        .nav a:hover{
+            color: black;
+        }
+        .nav li{
+            flex-grow: 1;
+
+        }
+
+
+
+
+    </style>
+
+
+    
+</head>
+<body>
+    
+    
+    <header class="box">
+        
+        <div>
+            <img src="./img/1.png" alt="">
+        </div>
+        <div class="box2"></div>
+        <ul class="nav">
+            <li><a href="首页.html">首页</a></li>
+            <li><a href="系统简介.html">系统简介</a></li>
+            <li><a href="免费授权.html">免费授权</a></li>
+            <li><a href="4.html">推荐商家</a></li>
+            <li><a href="5.html">开发手册</a></li>
+            <li><a href="6.html">技术交流</a></li>
+            <li><a href="7.html">更新日志</a></li>
+        </ul>
+    
+    </header>
+    <div style="width: 150px;">
+        <iframe name="weather_inc" 
+		src="http://i.tianqi.com/index.php?c=code&id=7" 
+		style="border:solid 1px #7ec8ea" 
+		
+		marginwidth="0" marginheight="0" scrolling="no">
+	    </iframe>
+    </div>
+</body>
+</html>

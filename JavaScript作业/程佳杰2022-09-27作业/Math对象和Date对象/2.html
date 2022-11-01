@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        // var year=new Date(prompt(""));
+        
+        // function fun(s){
+            
+        //     var fullyear=year.getFullYear();
+        //     var month=year.getMonth();
+        //     var day=year.getDate();
+
+        //     if (fullyear < 2008 || (month <= 0 || month > 12) || (day <= 0 || day > 31)) {
+        //        alert("输入错误");
+        //        year=new Date(prompt(""));
+        //     }
+        //     // 判断到输入年份为止，经过了几个闰年
+        //     var runyear;
+        //     if(fullyear>2008){
+
+        //         runyear=Math.floor((year - 2008) / 4) + 1;
+                
+        //     }else{
+        //         alert("输入错误");
+        //         year=new Date(prompt(""));
+        //     }
+        //     //输入年份之前所有天数
+        //     var runday=(year-2008)*365 + runyear;
+
+
+        //      // 判断输入年份当年是否是闰年
+        //     var runFlag = !!((((year % 4) === 0 && (year % 100) !== 0) || (year % 400) === 0));
+
+        //     // 4、6、9、11月份天数不能超过30天
+        //     if ((month === 4 || month === 6 || month === 9 || month === 11) && (day > 30)) {
+        //         alert("输入错误");
+        //         year=new Date(prompt(""));
+        //     }
+        //     // 闰年2月不能超过29，平年2月不能超过28
+        //     if (runFlag && (month === 2) && (day > 29)) {
+        //         alert("输入错误");
+        //         year=new Date(prompt(""));
+        //     } else if (!runFlag && (month === 2) && (day > 28)) {
+        //         alert("输入错误");
+        //         year=new Date(prompt(""));
+        //     }
+
+        //     switch (month) {
+        //             case 12:
+        //                 sum += 30
+        //             case 11:
+        //                 sum += 31
+        //             case 10:
+        //                 sum += 30
+        //             case 9:
+        //                 sum += 31
+        //             case 8:
+        //                 sum += 31
+        //             case 7:
+        //                 sum += 30
+        //             case 6:
+        //                 sum += 31
+        //             case 5:
+        //                 sum += 30
+        //             case 4:
+        //                 sum += 31
+        //             case 3:
+        //         // 平年或闰年二月
+        //             runFlag ? (sum += 29) : (sum += 28)
+        //             case 2:
+        //                 sum += 31
+        //             case 1:
+        //                 sum += 0
+        //             }
+        //         // 输入月份月天数
+        //             sum += day
+
+        //         var r = sum % 5;
+        //     if (r === 1 || r === 2 || r === 3) {
+        //         alert("He is working");
+        //     } else {
+        //         alert("He is having a rest");
+
+        //     }
+
+
+
+
+
+
+        // }
+        // fun(year);
+
+
+        var year=new Date(prompt(""));
+function fun(s){
+
+var fullyear=year.getFullYear();
+var month=year.getMonth();
+var day=year.getDate();
+
+if (fullyear < 2008 || (month <= 0 || month > 12) || (day <= 0 || day > 31)) {
+               alert("输入错误");
+               year=new Date(prompt(""));
+            }
+    if(fullyear>2008){
+        var runyear=Math.floor((fullyear - 2008) / 4) + 1;
+    }
+    //      var days;
+    // switch (month) {
+    //                 case 11:
+    //                     days = 31;
+    //                 case 10:
+    //                     days == 30;
+    //                 case 9:
+    //                     days == 31;  
+    //                 case 8:
+    //                     days == 30; 
+    //                 case 7:
+    //                     days == 31; 
+    //                 case 6:
+    //                     days == 31; 
+    //                 case 5:
+    //                     days == 30; 
+    //                 case 4:
+    //                     days == 31; 
+    //                 case 3:
+    //                     days == 30;
+    //                 case 2:
+    //                     days == 31; 
+    //                 case 1:
+    //                 if((year%4==0 && year%100!=0)||(year%400==0)){
+    //                         days==28;
+    //                     }else{
+    //                        days==29;
+    //                     }
+                       
+    //                 case 0:
+    //                     days == 31; 
+    //                 }
+
+    //                 var sun1;
+    //                 sun1 += days;
+                var sum=(fullyear-2008)*365 + runyear+day;
+
+
+    // switch (month) {
+    //                 case 12:
+    //                     sum += 31
+    //                 case 11:
+    //                     sum += 30
+    //                 case 10:
+    //                     sum += 31
+    //                 case 9:
+    //                     sum += 30
+    //                 case 8:
+    //                     sum += 31
+    //                 case 7:
+    //                     sum += 31
+    //                 case 6:
+    //                     sum += 30
+    //                 case 5:
+    //                     sum += 31
+    //                 case 4:
+    //                     sum += 30
+    //                 case 3:
+    //                     sum += 31
+    //                 case 2:
+    //                 if((year%4==0 && year%100!=0)||(year%400==0)){
+    //                     sum += 28;
+    //                    }else{
+    //                     sum +=29;
+    //                     }
+    //                 case 1:
+    //                     sum += 31
+    //                 }
+    //             // 输入月份月天数
+    //                 sum += day
+
+    //                 var summ=(fullyear-2008)*365 + runyear +sum;
+
+
+                var r = sum % 5;
+            if (r === 1 || r === 2 || r === 3) {
+                alert("他在打鱼");
+            } else {
+                alert("他在晒网");
+
+            }
+
+
+                
+
+console.log(fullyear);
+console.log(month+1);
+console.log(day);
+console.log(runyear);
+
+
+console.log(sum);
+
+
+
+
+
+
+
+
+}
+
+
+fun(year);
+
+
+
+
+
+
+
+   
+
+
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

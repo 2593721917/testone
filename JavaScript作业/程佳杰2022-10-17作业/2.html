@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    const arr1 = [78,34,90,100,56,89,100,64,88,83];
+
+    let arr = Array.from(new Set(arr1));
+    console.log(arr);
+
+
+    function createNegativeArrayProxy(array){
+      // 如果传入的参数不是数组，则抛出异常
+      if(!Array.isArray(array)){
+        throw new TypeError('Expected an array');
+      }
+
+      //返回新的代理，新代理用传入的数组为代理目标。
+      return new Proxy(array, {
+        get: (target, index)=>{
+          index= +index;
+          return target[index<0?target.length+index:index];
+        },
+        set: (target, index, val)=>{
+          index = + index;
+          return target[index<0?target.length+index:index]=val;
+        }
+      })
+    }
+
+    
+    const proxyArr = createNegativeArrayProxy(arr);
+    console.log(arr[-2]);//undefinded
+    console.log(proxyArr[-2]);//88
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

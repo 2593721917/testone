@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var arr = [
+                    ["前端", "3人", "8-15k", "本科"],
+                    ["后端", "5人", "10-25k", "研究生"],
+                    ["UI", "2人", "9-11k", "大专"],
+                    ["ETL工程师", "10人", "6-12k", "大专"],
+                    ];
+
+
+
+    var newarr = arr[0].map(function(col, i) {
+
+        return arr.map((row)=>row[i])
+      
+      });
+
+
+      console.log(newarr);
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

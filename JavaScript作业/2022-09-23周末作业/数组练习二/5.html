@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       
+       var arr= [
+                { name: "小明", year: 2019, sales: 53 },
+                { name: "小明", year: 2020, sales: 234 },
+                { name: "小明", year: 2018, sales: 24 },
+                { name: "小强", year: 2019, sales: 31 },
+                { name: "小强", year: 2020, sales: 567 },
+                { name: "小强", year: 2018, sales: 678 },
+                { name: "小红", year: 2019, sales: 465 },
+                { name: "小红", year: 2020, sales: 82 },
+                { name: "小红", year: 2018, sales: 576 },
+                { name: "小马", year: 2019, sales: 4567 },
+                { name: "小马", year: 2020, sales: 832 },
+                { name: "小马", year: 2018, sales: 674 },
+                ];
+
+
+            var nameList = Array.from(new Set(arr.map(e => { return e.name }))).reduce((previous, current) => {
+                previous.push(
+                arr.filter((item) => {
+                return item.name == current
+            }).reduce((previous, current) => {
+            return previous.sales > current.sales ? previous : current
+            }, [])
+            )
+            return previous
+            }, []);
+        
+            console.log(nameList);
+
+       
+
+    
+
+
+  
+
+        
+        
+    
+        
+
+
+
+
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

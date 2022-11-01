@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const proxy_cancel = Proxy.revocable({},{
+        get(){
+            return 'hello, world'
+        }
+        })
+        let easy =proxy_cancel;
+        console.log(easy.proxy.name);
+
+        easy.revoke();
+//将上面的声明进行简写，简写过后，不需要通过proxy_cancel就能使用proxy和revoke
+    // const proxy_cancel = {name:'hello,world'};
+
+    // let name =proxy_cancel;
+    
+
+    // console.log(name);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var year1=new Date(prompt(""));
+        var year2=new Date(prompt(""));
+
+        function fun(a,b){
+
+            var date1=new Date(a);
+            var date2=new Date(b);
+
+             var s1=date1.getTime();
+             var s2=date2.getTime();
+
+
+
+             var day=parseInt((s2-s1)/1000/60/60/24);
+
+             console.log(day);
+
+        }
+
+        fun( year1,year2);
+
+
+
+
+
+   
+
+
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>
